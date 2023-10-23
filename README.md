@@ -1,7 +1,7 @@
 # Noughts-and-Crosses-Tic-Tac-Toe-Game-Python-Project
 Developed a command-line-based Noughts and Crosses game in Python that allows two players to play the classic game. The game includes player input validation, win condition checks, and interactive turn-based gameplay.
 
-Key Features:
+**Key Features:**
 
 Interactive command-line interface for player moves.
 - Checks for valid moves and prevents overwriting existing moves.
@@ -9,7 +9,7 @@ Interactive command-line interface for player moves.
 - Implements a turn-based system for two players.
 - Utilizes Python data structures for game state management.
 
-Technologies and Tools:
+**Technologies and Tools:**
 Python
 
 
@@ -32,11 +32,12 @@ def printBoard(xstate, zstate):
 
 def checkwin(xstate, zstate):
     wins = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    
     for win in wins:
-        if sum(xstate[win[0]], xstate[win[1]], xstate[win[2]]) == 3:
+        if xstate[win[0]] + xstate[win[1]] + xstate[win[2]] == 3:
             print("X won the match")
             return 1
-        if sum(zstate[win[0]], zstate[win[1]], zstate[win[2]]) == 3:
+        if zstate[win[0]] + zstate[win[1]] + zstate[win[2]] == 3:
             print("O won the match")
             return 0
     return -1
@@ -73,8 +74,7 @@ if __name__ == "__main__":
 
 
 
-
-Responsibilities:
+**Responsibilities**:
 
 - Game logic and functionality design.
 - Code implementation, including the game board, player moves, and win condition checks.
